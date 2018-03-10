@@ -8,6 +8,11 @@ export const addMessage = (user, text) => ({
   created: Date.now()
 });
 
+export const deleteMessage = (id) => ({
+  type: 'DELETE_MESSAGE',
+  id
+});
+
 export const switchUser = (selectedUser) => ({
   type: 'SWITCH_USER',
   selectedUser

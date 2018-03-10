@@ -9,7 +9,13 @@ const messages = (state = [],action) => {
           text: action.text,
           created: action.created
         })
-      ]
+      ];
+    case 'DELETE_MESSAGE':
+      return state.filter((message) => {
+        if(message.id !== action.id) {
+          return true;
+        }
+      })
     default:
       return state;
   }

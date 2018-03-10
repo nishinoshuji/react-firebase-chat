@@ -3,20 +3,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addMessage } from '../actions';
 
-let AddMessage = ({dispatch}) => {
-  let userInput,
-      textInput
+let AddMessage = ({currentUser,dispatch}) => {
+  let textInput;
+
   return (
     <div>
-      user: <input ref={(node) => {
-        userInput = node
-      }}/>
       text: <input ref={(node) => {
         textInput = node
       }}/>
       <button onClick={() => {
-        dispatch(addMessage(userInput.value, textInput.value))
-        userInput.value = '';
+        dispatch(addMessage(currentUser,textInput.value))
         textInput.value = '';
       }}>
         add message
@@ -26,9 +22,12 @@ let AddMessage = ({dispatch}) => {
 };
 
 AddMessage.propTypes = {
+  currentUser: PropTypes.string.isRequired,
   dispatch: PropTypes.func.isRequired
 };
 
-AddMessage = connect()(AddMessage);
+AddMessage = connect((state) => {
+  return { currentUser: state.currentUser}
+})(AddMessage);
 
 export default AddMessage;
