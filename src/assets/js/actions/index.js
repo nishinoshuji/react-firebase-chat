@@ -7,3 +7,8 @@ export const addMessage = (user, text) => ({
   text,
   created: Date.now()
 });
+
+export const switchUser = (selectedUser) => ({
+  type: 'SWITCH_USER',
+  selectedUser
+});

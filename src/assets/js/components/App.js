@@ -1,11 +1,11 @@
 import React from 'react';
 import AddMessage from '../containers/AddMessage';
 import VisibleMessageList from '../containers/VisibleMessageList';
-import SwitchUsers from './SwitchUsers';
+import VisibleUserList from '../containers/VisibleUserList';
 
 const App = () => (
   <div>
-    <SwitchUsers />
+    <VisibleUserList />
     <AddMessage />
     <VisibleMessageList />
   </div>

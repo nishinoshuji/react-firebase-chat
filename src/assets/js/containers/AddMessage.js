@@ -24,10 +24,11 @@ let AddMessage = ({dispatch}) => {
     </div>
   )
 };
+
 AddMessage.propTypes = {
   dispatch: PropTypes.func.isRequired
-}
+};
 
-AddMessage = connect()(AddMessage)
+AddMessage = connect()(AddMessage);
 
 export default AddMessage;
