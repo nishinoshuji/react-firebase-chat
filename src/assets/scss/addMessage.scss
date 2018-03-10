@@ -1,3 +1,23 @@
 .add-message {
-  margin-bottom: 20px;
+  align-items: flex-end;
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+
+  textarea {
+    width: 60%;
+    margin-right:10px;
+    padding: 5px;
+    resize: none;
+    font-size: 14px;
+  }
+  button {
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    &:hover {
+      background: #aaa;
+      color: #fff;
+    }
+  }
 }

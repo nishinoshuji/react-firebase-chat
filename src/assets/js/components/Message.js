@@ -8,8 +8,12 @@ const Message = ({user, id, text, created, onClick}) => {
   return (
     <div className="message">
       <div className="message-body">
-        <p className="user-name">{user}</p>
-        <p className="text">{text}</p>
+        <div className="user-name">
+          <p>{user}</p>
+        </div>
+        <div className="text">
+          <p>{text}</p>
+        </div>
       </div>
       <div className="message-detail">
         <p>{createdDate}</p>

@@ -20,7 +20,7 @@ const MessageList = ({messages,currentUser,onDeleteButton}) => {
   });
 
   return (
-    <ul>
+    <ul className="messages">
       {renderMessages}
     </ul>
   )

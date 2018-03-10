@@ -1,4 +1,4 @@
-const initialState = ['A', 'B'];
+const initialState = ['A', 'B', 'C'];
 
 const users = (state = initialState) => {
   return state;

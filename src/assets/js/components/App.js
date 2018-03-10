@@ -6,9 +6,13 @@ import '../../scss/app.scss';
 
 const App = () => (
   <div className="app-wrap">
-    <VisibleUserList />
-    <AddMessage />
-    <VisibleMessageList />
+    <div className="app-header">
+      <VisibleUserList />
+      <AddMessage />
+    </div>
+    <div className="app-body">
+      <VisibleMessageList />
+    </div>
   </div>
 )
 export default App;

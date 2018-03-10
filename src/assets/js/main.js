@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './components/App.js';
 import reducers from './reducers';
-import { addMessage,switchUser } from './actions';
+//import { addMessage,switchUser } from './actions';
 import 'reset-css/reset.css';
 
 const store = createStore(reducers);
@@ -17,7 +17,7 @@ render(
 );
 
 //test
-store.dispatch(addMessage('A', 'test'));
-store.dispatch(addMessage('B', 'testaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssss2'));
-store.dispatch(switchUser('B'));
+//store.dispatch(addMessage('A', 'test'));
+//store.dispatch(addMessage('B', 'testaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssss2'));
+//store.dispatch(switchUser('B'));
 console.log(store.getState());

@@ -3,7 +3,10 @@ import UserList from '../components/UserList';
 import { switchUser } from '../actions';
 
 const mapStateToProps = (state) => {
-  return { users: state.users}
+  return {
+    users: state.users,
+    currentUser: state.currentUser
+  }
 };
 
 const mapDispatchToProps = {

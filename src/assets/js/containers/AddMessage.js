@@ -9,7 +9,7 @@ let AddMessage = ({currentUser,dispatch}) => {
 
   return (
     <div className="add-message">
-      text: <textarea ref={(node) => {
+      <textarea ref={(node) => {
         textInput = node
       }}/>
       <button onClick={() => {

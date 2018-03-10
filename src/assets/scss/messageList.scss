@@ -1,15 +1,28 @@
+.messages {
+  padding: 20px 0;
+}
 .item {
   display: flex;
   margin-bottom: 20px;
 
   &.current-user {
+
     .message{
       margin-left: auto;
+
+      .message-body {
+        grid-template-columns: auto 35px;
+      }
     }
   }
   &:not(.current-user) {
+
     .message{
       margin-right: auto;
+
+      .message-body {
+        grid-template-columns: 35px auto;
+      }
     }
   }
 }
@@ -18,23 +31,95 @@
 }
 
 .message-body {
-  display: flex;
+  display: grid;
   width: 100%;
   margin-bottom: 5px;
 
   .user-name {
-    padding: 10px;
-    max-height: 15px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    margin-right: 10px;
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+
+    p {
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 10px;
+      width: 35px;
+      height: 35px;
+      box-sizing: border-box;
+    }
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      right: -7px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 9px;
+      border-color: transparent transparent transparent #fff;
+      content: '';
+    }
+    &::after {
+      position: absolute;
+      top: 10px;
+      right: -9px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 9px;
+      border-color: transparent transparent transparent #aaa;
+      content: '';
+    }
+
+    .current-user & {
+      grid-row: 1;
+      grid-column: 2;
+
+      &::before {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: -7px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 9px 6px 0;
+        border-color: transparent #fff transparent transparent;
+        content: '';
+      }
+      &::after {
+        position: absolute;
+        top: 10px;
+        left: -9px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 9px 6px 0;
+        border-color: transparent #aaa transparent transparent;
+        content: '';
+      }
+    }
   }
   .text {
-    width: 100%;
-    padding: 10px;
-    word-break: break-all;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+    grid-row: 1;
+    grid-column: 2;
+    padding-left: 15px;
+    padding-right: 0;
+
+    p {
+      word-break: break-all;    width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .current-user & {
+      grid-row: 1;
+      grid-column: 1;
+      padding-left: 0;
+      padding-right: 15px;
+    }
   }
 }
 
@@ -51,5 +136,17 @@
   }
   div {
     margin-left: auto;
+
+    button {
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
   }
 }
