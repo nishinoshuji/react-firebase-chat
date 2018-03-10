@@ -6,13 +6,13 @@ const Message = ({user, id, text, created, onClick}) => {
   const createdDate = dateformat(new Date(created), 'yyyy/mm/dd hh:mm:ss');
 
   return (
-    <li>
+    <div>
       <p>user:{user}</p>
       <p>id:{id}</p>
       <p>text:{text}</p>
       <p>created:{createdDate}</p>
       <button onClick={() => onClick(id)}>delete</button>
-    </li>
+    </div>
   )
 }
 Message.propTypes = {

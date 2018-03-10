@@ -3,7 +3,10 @@ import MessageList from '../components/MessageList';
 import { deleteMessage } from '../actions';
 
 const mapStateToProps = (state) => {
-  return { messages: state.messages}
+  return {
+    messages: state.messages,
+    currentUser: state.currentUser
+  }
 };
 
 const mapDispatchToProps = {
