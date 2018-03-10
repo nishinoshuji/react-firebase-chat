@@ -1,4 +1,4 @@
-const initialState = 'testA';
+const initialState = 'A';
 
 const currentUser = (state = initialState, action) => {
   switch (action.type) {

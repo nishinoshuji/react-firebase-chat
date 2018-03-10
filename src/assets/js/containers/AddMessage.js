@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addMessage } from '../actions';
+import '../../scss/addMessage.scss';
 
 let AddMessage = ({currentUser,dispatch}) => {
   let textInput;
 
   return (
-    <div>
-      text: <input ref={(node) => {
+    <div className="add-message">
+      text: <textarea ref={(node) => {
         textInput = node
       }}/>
       <button onClick={() => {

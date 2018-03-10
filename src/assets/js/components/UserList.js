@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../scss/userList.scss';
 
 const UserList = ({users, onSwitchButton}) => {
   return (
-    <div>
+    <div className="user-list">
+      <p>UserChoice:</p>
       {users.map((user) =>
         <button
           key={user}

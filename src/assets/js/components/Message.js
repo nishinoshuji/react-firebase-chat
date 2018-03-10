@@ -6,12 +6,17 @@ const Message = ({user, id, text, created, onClick}) => {
   const createdDate = dateformat(new Date(created), 'yyyy/mm/dd hh:mm:ss');
 
   return (
-    <div>
-      <p>user:{user}</p>
-      <p>id:{id}</p>
-      <p>text:{text}</p>
-      <p>created:{createdDate}</p>
-      <button onClick={() => onClick(id)}>delete</button>
+    <div className="message">
+      <div className="message-body">
+        <p className="user-name">{user}</p>
+        <p className="text">{text}</p>
+      </div>
+      <div className="message-detail">
+        <p>{createdDate}</p>
+        <div>
+          <button onClick={() => onClick(id)}>delete</button>
+        </div>
+      </div>
     </div>
   )
 }

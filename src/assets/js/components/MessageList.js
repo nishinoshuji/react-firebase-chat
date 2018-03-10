@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Message from './Message';
+import '../../scss/messageList.scss';
 
 const MessageList = ({messages,currentUser,onDeleteButton}) => {
 
   const renderMessages = messages.map((message) => {
-    const userClassName = message.user == currentUser ? 'current-user' : '';
+    const userClassName = message.user == currentUser ? 'item current-user' : 'item';
     return (
       <li
-        className={'list',userClassName}
+        className={userClassName}
         key={message.id}>
         <Message
           {...message}
