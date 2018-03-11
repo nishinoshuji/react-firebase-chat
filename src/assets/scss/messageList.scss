@@ -48,33 +48,26 @@
       height: 35px;
       box-sizing: border-box;
     }
-    &::before {
-      position: absolute;
-      z-index: 1;
-      top: 10px;
-      right: -7px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 6px 0 6px 9px;
-      border-color: transparent transparent transparent #fff;
-      content: '';
-    }
-    &::after {
-      position: absolute;
-      top: 10px;
-      right: -9px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 6px 0 6px 9px;
-      border-color: transparent transparent transparent #aaa;
-      content: '';
-    }
 
     .current-user & {
       grid-row: 1;
       grid-column: 2;
+    }
+  }
+  .text {
+    grid-row: 1;
+    grid-column: 2;
+    padding-left: 15px;
+    padding-right: 0;
+
+    p {
+      position: relative;
+      word-break: break-all;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      box-sizing: border-box;
 
       &::before {
         position: absolute;
@@ -99,20 +92,34 @@
         border-color: transparent #aaa transparent transparent;
         content: '';
       }
-    }
-  }
-  .text {
-    grid-row: 1;
-    grid-column: 2;
-    padding-left: 15px;
-    padding-right: 0;
+      .current-user & {
 
-    p {
-      word-break: break-all;    width: 100%;
-      padding: 10px;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      box-sizing: border-box;
+        &::before {
+          position: absolute;
+          z-index: 1;
+          top: 10px;
+          right: -7px;
+          left: auto;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 0 6px 9px;
+          border-color: transparent transparent transparent #fff;
+          content: '';
+        }
+        &::after {
+          position: absolute;
+          top: 10px;
+          right: -9px;
+          left: auto;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 0 6px 9px;
+          border-color: transparent transparent transparent #aaa;
+          content: '';
+        }
+      }
     }
     .current-user & {
       grid-row: 1;
@@ -138,7 +145,7 @@
     margin-left: auto;
 
     button {
-      padding: 0;
+      padding: 0 0 4px 0;
       margin: 0;
       border: none;
       background: none;
