@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "webpack": "webpack",
-    "deploy": "webpack && firebase deploy"
+    "webpack": "webpack --mode development",
+    "deploy": "webpack --mode production && firebase deploy"
   },
   "repository": {
     "type": "git",
