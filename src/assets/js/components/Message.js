@@ -5,11 +5,16 @@ import dateformat from 'dateformat';
 const Message = ({user, id, text, created, onClick}) => {
   const createdDate = dateformat(new Date(created), 'yyyy/mm/dd hh:mm:ss');
 
+  const userInitial = user.charAt(0);
+
   return (
     <div className="message">
+      <div className="message-name-all">
+        <p>{user}</p>
+      </div>
       <div className="message-body">
         <div className="user-name">
-          <p>{user}</p>
+          <p>{userInitial}</p>
         </div>
         <div className="text">
           <p>{text}</p>

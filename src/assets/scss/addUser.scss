@@ -1,16 +1,13 @@
-.add-message {
+.add-user {
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #aaa;
 
-  textarea {
-    width: 60%;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid #aaa;
-    resize: none;
+  input {
+    width: 80px;
+    margin-right: 10px;
     font-size: 14px;
+    border: 1px solid #aaa;
   }
   button {
     padding: 5px 10px;

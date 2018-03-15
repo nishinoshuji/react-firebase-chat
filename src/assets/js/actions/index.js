@@ -17,3 +17,8 @@ export const switchUser = (selectedUser) => ({
   type: 'SWITCH_USER',
   selectedUser
 });
+
+export const addUser = (userName) => ({
+  type: 'ADD_USER',
+  userName
+});

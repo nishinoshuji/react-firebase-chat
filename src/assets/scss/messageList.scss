@@ -30,6 +30,17 @@
   width: 45%;
 }
 
+.message-name-all {
+  overflow: hidden;
+  padding-bottom: 5px;
+  font-size: 10px;
+  text-align: left;
+
+  .current-user & {
+    text-align: right;
+  }
+}
+
 .message-body {
   display: grid;
   width: 100%;
