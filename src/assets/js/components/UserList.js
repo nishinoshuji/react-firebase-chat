@@ -2,31 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../../scss/userList.scss';
 
-const UserList = ({users, currentUser, onSwitchButton}) => {
+const UserList = ({users, onSwitchSelect}) => {
   const list = users.map((user) => {
-    const userClass = user === currentUser ? 'current-user' : '' ;
     return (
-      <button
-        className={userClass}
+      <option
         key={user}
-        onClick={() => onSwitchButton(user)}>
+        value={user}>
         {user}
-      </button>
+      </option>
     );
+  });
+
+  let selectValue;
+
+  const onSelectChange = ((e)=>{
+    selectValue = e.target.value;
+    onSwitchSelect(selectValue);
   });
 
   return (
     <div className="user-list">
-      <p>UserChoice:</p>
-      {list}
+      <p>User</p>
+      <select
+        value={selectValue}
+        onChange={onSelectChange}>
+        {list}
+      </select>
     </div>
   )
 }
 
 UserList.propTypes = {
   users: PropTypes.arrayOf(PropTypes.string).isRequired,
-  currentUser: PropTypes.string.isRequired,
-  onSwitchButton: PropTypes.func
+  onSwitchSelect: PropTypes.func
 }
 
 export default UserList;

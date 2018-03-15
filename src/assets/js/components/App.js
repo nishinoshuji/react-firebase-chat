@@ -9,8 +9,10 @@ const App = () => (
   <div className="app-wrap">
     <div className="app-header">
       <AddUser />
-      <VisibleUserList />
-      <AddMessage />
+      <div className="app-message-send">
+        <VisibleUserList />
+        <AddMessage />
+      </div>
     </div>
     <div className="app-body">
       <VisibleMessageList />

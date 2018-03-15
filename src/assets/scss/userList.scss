@@ -1,25 +1,13 @@
 .user-list {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
   font-size: 15px;
 
   p {
-    margin-right: 5px;
+    padding-bottom: 10px;
   }
-  button {
-    padding: 5px 30px;
-    background: #fff;
+  select {
+    width: 80px;
+    margin-right: 10px;
+    font-size: 14px;
     border: 1px solid #aaa;
-    margin: 10px;
-
-    &.current-user {
-      background: #aaa;
-      color: #fff;
-    }
-    &:hover {
-      background: #aaa;
-      color: #fff;
-    }
   }
 }

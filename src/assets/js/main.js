@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './components/App.js';
 import reducers from './reducers';
-import { addUser } from './actions';
+//import { addUser } from './actions';
 import 'reset-css/reset.css';
 
 const store = createStore(reducers);
@@ -19,5 +19,5 @@ render(
 //test
 //store.dispatch(addMessage('A', 'test'));
 //store.dispatch(addMessage('B', 'testaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssss2'));
-store.dispatch(addUser('f'));
+//store.dispatch(addUser('f'));
 console.log(store.getState());

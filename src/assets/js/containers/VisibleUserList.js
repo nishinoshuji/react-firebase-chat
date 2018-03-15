@@ -4,13 +4,12 @@ import { switchUser } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users,
-    currentUser: state.currentUser
+    users: state.users
   }
 };
 
 const mapDispatchToProps = {
-  onSwitchButton: switchUser
+  onSwitchSelect: switchUser
 }
 
 const VisibleUserList = connect(
